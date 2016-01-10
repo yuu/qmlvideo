@@ -6,8 +6,8 @@ Item {
     width: d_HD.width
     height: d_HD.height
 
-    property var d_HD: Qt.size(1280, 720)
-    property var d_fullHD: Qt.size(1920, 1080)
+    property size d_HD: Qt.size(1280, 720)
+    property size d_fullHD: Qt.size(1920, 1080)
 
     property url source: "/path/file"
 
