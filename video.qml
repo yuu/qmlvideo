@@ -5,6 +5,7 @@ Item {
     id: root
     width: d_HD.width
     height: d_HD.height
+    focus: true
 
     property size d_HD: Qt.size(1280, 720)
     property size d_fullHD: Qt.size(1920, 1080)
@@ -21,5 +22,24 @@ Item {
         id: output
         source: player
         anchors.fill: parent
+    }
+
+    Keys.onPressed: {
+        if (event.key == Qt.Key_Space)
+            startPause();
+    }
+
+    function startPause() {
+        switch (player.playbackState) {
+            case MediaPlayer.PlayingState:
+                player.pause();
+                break;
+            case MediaPlayer.PausedState:
+                player.play();
+                break;
+            case MediaPlayer.StoppedState:
+                player.play();
+                break;
+        }
     }
 }
