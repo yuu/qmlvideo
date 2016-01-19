@@ -14,7 +14,7 @@ Usage
 -----
 
 ```
-$ qmlscense video.qml
+$ qmlscense Player.qml
 ```
 
 Futures
@@ -28,4 +28,4 @@ Futures
 License
 -------
 
-MIT License
+[MIT License](LICENSE)
