@@ -5,12 +5,11 @@ Item {
     id: root
     width: d_HD.width
     height: d_HD.height
-    focus: true
 
     property size d_HD: Qt.size(1280, 720)
     property size d_fullHD: Qt.size(1920, 1080)
 
-    property url source: "/path/file"
+    property url source
 
     MediaPlayer {
         id: player
@@ -22,11 +21,6 @@ Item {
         id: output
         source: player
         anchors.fill: parent
-    }
-
-    Keys.onPressed: {
-        if (event.key == Qt.Key_Space)
-            startPause();
     }
 
     function startPause() {
