@@ -20,6 +20,12 @@ Item {
         id: player
         source: root.source
         autoPlay: true
+
+        onError: {
+            if (player.NoError != error) {
+                console.log("[Video.qml] Error:" + error + " " + errorString);
+            }
+        }
     }
 
     VideoOutput {
