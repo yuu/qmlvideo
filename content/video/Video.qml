@@ -10,6 +10,11 @@ Item {
     property size d_fullHD: Qt.size(1920, 1080)
 
     property url source
+    property alias rate: player.playbackRate
+    property alias volume: player.volume
+    property alias mute: player.muted
+    property alias autoPlay: player.autoPlay
+    property alias loop: player.loops
 
     MediaPlayer {
         id: player
