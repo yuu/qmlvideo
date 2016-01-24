@@ -11,5 +11,9 @@ Video {
     Keys.onPressed: {
         if (event.key == Qt.Key_Space)
             root.startPause();
+        else if (event.key == Qt.Key_Plus)
+            root.rate += 0.25
+        else if (event.key == Qt.Key_Minus)
+            root.rate -= 0.25
     }
 }
